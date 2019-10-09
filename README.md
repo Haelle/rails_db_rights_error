@@ -1,24 +1,17 @@
-# README
+# How to reproduce
+## Setup DB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run `db/setup_postgres.sql` as a Postgres SUPERUSER.
+```bash
+sudo -u postgres -i
+cd /path/to/project
+psql -f db/setup_postgres.sql
+```
 
-Things you may want to cover:
+## Run migrations
+`rails db:migrate RAILS_ENV=test`
 
-* Ruby version
+## Run specs
+`rpsec`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It raises an error saying migrations needs to be run
